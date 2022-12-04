@@ -1,8 +1,8 @@
 public class RegistrarMultimediaEnBD {
-    private int id;
-    private String nombre;
-    private FechaVisualizacion fechaFin;
-    private Valoracion valoracion;
+    private final int id;
+    private final String nombre;
+    private final FechaVisualizacion fechaFin;
+    private final Valoracion valoracion;
 
     public RegistrarMultimediaEnBD(String nombre, FechaVisualizacion fechaFin, Valoracion valoracion) {
         this.nombre = nombre;
