@@ -3,12 +3,6 @@ public class FechaVisualizacion {
     private int mes;
     private int dia;
 
-    public FechaVisualizacion(int ano, int mes, int dia) {
-        this.ano = ano;
-        this.mes = mes;
-        this.dia = dia;
-    }
-
     public FechaVisualizacion() {
         this.ano = 0;
         this.mes = 0;
@@ -39,10 +33,9 @@ public class FechaVisualizacion {
         this.dia = dia;
     }
 
-    @Override
     public String toString() {
-        return ano + "-" +
-                mes + "-" +
-                dia;
+        return this.getAno() + "-" +
+                this.getMes() + "-" +
+                this.getDia();
     }
 }
