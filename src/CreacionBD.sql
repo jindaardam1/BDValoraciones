@@ -25,3 +25,35 @@ VALUES (nom, fe_fi, no_ba_so, no_vi, no_tra, no_med, det);
 END
 $$
 DELIMITER ;
+
+-- FILTRAR POR FECHA --
+SELECT * FROM valoraciones WHERE fecha_fin > fecha;
+SELECT * FROM valoraciones WHERE fecha_fin < fecha;
+SELECT * FROM valoraciones WHERE fecha_fin = fecha;
+SELECT * FROM valoraciones WHERE fecha_fin NOT BETWEEN fechaMenor AND fechaMayor;
+SELECT * FROM valoraciones WHERE fecha_fin BETWEEN fechaMenor AND fechaMayor;
+
+-- FILTRAR POR NOTA BANDA SONORA --
+SELECT * FROM valoraciones WHERE nota_bandaSonora > nota;
+SELECT * FROM valoraciones WHERE nota_bandaSonora < nota;
+SELECT * FROM valoraciones WHERE nota_bandaSonora = nota;
+
+-- FILTRAR POR NOTA VISUAL --
+SELECT * FROM valoraciones WHERE nota_visual > nota;
+SELECT * FROM valoraciones WHERE nota_visual < nota;
+SELECT * FROM valoraciones WHERE nota_visual = nota;
+
+-- FILTRAR POR NOTA TRAMA --
+SELECT * FROM valoraciones WHERE nota_trama > nota;
+SELECT * FROM valoraciones WHERE nota_trama < nota;
+SELECT * FROM valoraciones WHERE nota_trama = nota;
+
+-- FILTAR POR NOTA MEDIA --
+SELECT * FROM valoraciones WHERE nota_media > nota;
+SELECT * FROM valoraciones WHERE nota_media < nota;
+SELECT * FROM valoraciones WHERE nota_media = nota;
+
+--FILTRAR POR DETALLES --
+SELECT * FROM valoraciones WHERE detalles IS NOT NULL;
+
+-- RECORDAR HACER UN BUSCADOR DE CONSULTAS PERSONALIZADAS --

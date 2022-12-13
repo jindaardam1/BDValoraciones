@@ -49,8 +49,8 @@ public class RegistrarMultimediaEnBD {
         out.println("¿Qué nota le pondrías a la trama?");
         valoracion.setNotaTrama(teclado.nextDouble());
         out.println("¿Quieres añadir algo más? (máximo 2000 caracteres)");
-        valoracion.setDetalles(teclado.nextLine());
         teclado.next();
+        valoracion.setDetalles(teclado.nextLine());
     }
 
     public static String devolveConfiguracionWorkbench() {

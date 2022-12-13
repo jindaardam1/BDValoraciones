@@ -8,14 +8,6 @@ public class Valoracion {
     private final double PONDERACIONVISUAL = 0.35;
     private final double PONDERACIONTRAMA = 0.4;
 
-    public Valoracion(double notaBandaSonora, double notaVisual, double notaTrama, String detalles) {
-        NotaBandaSonora = notaBandaSonora;
-        NotaVisual = notaVisual;
-        NotaTrama = notaTrama;
-        NotaMedia = 0;
-        this.detalles = detalles;
-    }
-
     public Valoracion() {
         NotaBandaSonora = 0.0;
         NotaVisual = 0.0;

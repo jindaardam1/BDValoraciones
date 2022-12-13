@@ -1,7 +1,5 @@
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
 
 public class Conector {
     private String database_name = "valoracionesBD";
@@ -39,5 +37,24 @@ public class Conector {
         }catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public void rellenarTablaDatosMySQL() {
+        String consulta = "SELECT * FROM valoraciones;";
+        Statement st;
+        Conector con = new Conector();
+        con.getConnection();
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("nombre");
+        model.addColumn("fecha_fin");
+        model.addColumn("nota_bandaSonora");
+        model.addColumn("nota_visual");
+        model.addColumn("nota_trama");
+        model.addColumn("nota_meida");
+        model.addColumn("detalles");
+
+
+
     }
 }
